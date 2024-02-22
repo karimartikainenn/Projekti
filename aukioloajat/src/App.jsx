@@ -83,7 +83,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>Aukioloajat</h1>
+      <h1>Espoon Kaupunginkirjastojen Aukioloajat</h1>
       <div className="date-picker-container">
         <div>
           <label>Alkupäivä:</label>
