@@ -5,6 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import "./App.css";
 import "./scss/styles.scss";
 import fi from "date-fns/locale/fi";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -82,6 +83,25 @@ const App = () => {
     return `${year}-${month}-${day}`;
   };
 
+  const generateCSV = () => {
+    // Muodostetaan CSV-tiedoston sisältö
+    let csvContent = "Nimi,Aukioloajat\n";
+    totalOpeningHours.forEach((library) => {
+      // Poista "hours" merkkijonosta
+      const openingHours = library.totalOpeningHours.replace(" hours", "");
+      csvContent += `${library.name},${openingHours}\n`;
+    });
+
+    // Luo Blob-objekti ja lataa CSV-tiedosto
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", "aukioloajat.csv");
+    document.body.appendChild(link);
+    link.click();
+  };
+
   return (
     <div>
       <h1>Aukioloajat</h1>
@@ -106,6 +126,11 @@ const App = () => {
       <br></br>
       <h2>Yhteensä: {totalCityOpeningHours.hours} hours</h2>
       <br></br>
+      <button className="button" onClick={generateCSV}>
+        Lataa aukioloajat CSV-muodossa
+      </button>
+      <br></br>
+      <br></br>
       <ul className="list-group">
         {totalOpeningHours.map((library) => (
           <li className="list-group-item" key={library.name}>
@@ -113,6 +138,8 @@ const App = () => {
           </li>
         ))}
       </ul>
+      <br></br>
+      <Footer></Footer>
     </div>
   );
 };
