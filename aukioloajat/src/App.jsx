@@ -3,7 +3,8 @@ import axios from "axios";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./App.css";
-import fi from "date-fns/locale/fi"; // Lisätään suomenkielinen lokalisaatio
+import "./scss/styles.scss";
+import fi from "date-fns/locale/fi";
 
 const App = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -49,7 +50,7 @@ const App = () => {
                 const to = new Date(`1970-01-01T${time.to}:00`);
 
                 if (!isNaN(from.getTime()) && !isNaN(to.getTime())) {
-                  const duration = (to - from) / (1000 * 60); // Convert milliseconds to minutes
+                  const duration = (to - from) / (1000 * 60);
                   totalDuration += duration;
                   totalDurationCity += duration;
                 }
@@ -83,14 +84,14 @@ const App = () => {
 
   return (
     <div>
-      <h1>Espoon Kaupunginkirjastojen Aukioloajat</h1>
+      <h1>Aukioloajat</h1>
       <div className="date-picker-container">
         <div>
           <label>Alkupäivä:</label>
           <DatePicker
             selected={startDate}
             onChange={(date) => setStartDate(date)}
-            locale={fi} // Asetetaan suomenkielinen lokalisaatio
+            locale={fi}
           />
         </div>
         <div>
@@ -98,14 +99,14 @@ const App = () => {
           <DatePicker
             selected={endDate}
             onChange={(date) => setEndDate(date)}
-            locale={fi} // Asetetaan suomenkielinen lokalisaatio
+            locale={fi}
           />
         </div>
       </div>
       <h2>Yhteensä: {totalCityOpeningHours.hours} hours</h2>
-      <ul className="custom_list">
+      <ul className="list-group">
         {totalOpeningHours.map((library) => (
-          <li key={library.name}>
+          <li className="list-group-item" key={library.name}>
             {library.name}: {library.totalOpeningHours}
           </li>
         ))}

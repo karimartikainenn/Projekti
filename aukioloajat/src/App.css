@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  
 }
 .custom_list {
   list-style-type: none;
@@ -43,3 +44,5 @@
 .read-the-docs {
   color: #888;
 }
+
+
