@@ -1,3 +1,16 @@
 // Import all of Bootstrap's CSS
 @import "bootstrap/scss/bootstrap";
 
+.list-group-item {
+  background-color: rgb(255, 255, 255);
+}
+
+.date-picker-container {
+    margin-bottom: 20px; /* Adjust as needed for spacing between containers */
+  }
+  
+  .date-picker-container label {
+    display: block; /* Ensure each label is on its own line */
+    margin-bottom: 5px; /* Adjust as needed for spacing between label and date picker */
+  }
+  

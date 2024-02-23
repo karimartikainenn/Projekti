@@ -1,16 +1,14 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  --bg-color: #081022; /* Define a global CSS variable for background color */
+  /* Other global styles */
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #131832;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body {
+  background-color: var(
+    --bg-color
+  ); /* Use the global CSS variable for background color */
+  /* Other body styles */
+  color: #ffffff;
 }
 
 a {

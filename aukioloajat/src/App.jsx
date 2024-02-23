@@ -103,7 +103,9 @@ const App = () => {
           />
         </div>
       </div>
+      <br></br>
       <h2>Yhteensä: {totalCityOpeningHours.hours} hours</h2>
+      <br></br>
       <ul className="list-group">
         {totalOpeningHours.map((library) => (
           <li className="list-group-item" key={library.name}>
