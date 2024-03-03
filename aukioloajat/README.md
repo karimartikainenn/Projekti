@@ -31,6 +31,10 @@ This increases the library's efficiency and accuracy in managing opening hours, 
 
 ## Usage:
 
+1. https://aukioloajat.vercel.app/
+   
+or
+   
 1. Clone the repository to your local machine.
 2. Navigate to the project directory.
 3. Install dependencies using `npm install`.
