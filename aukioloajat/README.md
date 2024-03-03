@@ -1,8 +1,42 @@
-# React + Vite
+# Library Opening Hours Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### Video Demo: 
 
-Currently, two official plugins are available:
+#### Description:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The Library Opening Hours Tracker is a web application that allows users to track and manage the opening hours of various libraries within a specified time range. Users can select a start and end date using date pickers, and the application retrieves data from an external API to display the total opening hours for each library during that time period. Additionally, users can download the opening hours data in CSV format for further analysis or record-keeping.
+
+## Project Structure:
+
+- **App.js:** This file contains the main React component for the application. It includes the logic for fetching data from the API, managing state using useState and useEffect hooks, rendering the user interface, and handling user interactions.
+
+- **Footer.js:** This component renders the footer section of the application, providing additional information or links if needed.
+
+- **styles.scss:** This file contains custom SCSS styles for styling the components and improving the overall visual appeal of the application.
+
+- **App.css:** This file contains additional CSS styles for the main application layout and structure.
+
+## Design Choices:
+
+- **API Integration:** The application integrates with an external API to retrieve library opening hours data. This approach ensures that the application always displays up-to-date information without the need for manual updates.
+
+- **CSV Download:** Providing the option to download opening hours data in CSV format enhances the usability of the application, allowing users to export and analyze the data using external tools or software.
+
+- **Responsive Design:** The application is designed to be responsive and accessible across different devices and screen sizes, ensuring a consistent user experience for all users.
+
+- **Localization:** The application supports localization by using the `date-fns` library to display date pickers and formatting dates according to the Finnish locale (`fi`).
+
+## Usage:
+
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Install dependencies using `npm install`.
+4. Start the development server using `npm start`.
+5. Open your web browser and navigate to `http://localhost:3000` to view the application.
+
+## Future Enhancements:
+
+- Implement user authentication to allow users to save and manage their favorite libraries or custom time ranges.
+- Add additional features such as filtering libraries by location or category.
+- Improve error handling and provide meaningful error messages to users in case of API failures or other issues.
+
