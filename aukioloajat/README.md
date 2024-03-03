@@ -4,7 +4,10 @@
 
 #### Description:
 
-The Library Opening Hours Tracker is a web application that allows users to track and manage the opening hours of various libraries within a specified time range. Users can select a start and end date using date pickers, and the application retrieves data from an external API to display the total opening hours for each library during that time period. Additionally, users can download the opening hours data in CSV format for further analysis or record-keeping.
+This project consists of an opening hour calculator designed for the library statistics team, leveraging the open API of Kirjastot.fi.
+The calculator is specifically designed to meet the needs of Espoo City Library, enabling the automatic retrieval and storage of library opening hours.
+Implemented with React, the application provides the library with an efficient tool for collecting opening hour data for monthly statistics.
+This increases the library's efficiency and accuracy in managing opening hours, enabling better planning and resource management.
 
 ## Project Structure:
 
